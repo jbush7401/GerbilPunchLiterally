@@ -5,7 +5,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: "./client/src/index.js",
+    entry: "./client/index.js",
     output: {
         path: __dirname + "/client",
         filename: "build.js"
