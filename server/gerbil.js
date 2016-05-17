@@ -4,24 +4,19 @@
 "use strict";
 var uuid = require('node-uuid');
 
-var Gerbil = function Gerbil(startX, startY) {
-    var x = startX;
-    var y = startY;
-    var id = uuid.v4();
-
-    var CheckIfHit = (clickX, clickY) => {
-        if(clickX >= x && clickX <= x+20 && clickY >= y && clickY <= y+20)
+class Gerbil {
+    constructor (startX, startY) {
+        this.x = startX;
+        this.y = startY;
+        this.id = uuid.v4();
+    }
+    CheckIfHit(clickX, clickY){
+        if(clickX >= this.x && clickX <= this.x+20 && clickY >= this.y && clickY <= this.y+20)
             return true;
-        else 
+        else
             return false;
     };
+}
 
-    return {
-        x: x,
-        y: y,
-        id: id,
-        CheckIfHit: CheckIfHit
-    }
-};
 
 module.exports = Gerbil;

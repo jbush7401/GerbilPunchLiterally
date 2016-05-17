@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Punching of Gerbils</title>
+  <link type="text/css" rel="stylesheet" href="/client/src/css/semantic/dist/semantic.min.css">
+  <link type="text/css" rel="stylesheet" href="/client/src/css/main.css">
+
+</head>
+<body>
+<div id="entry" class="ui page grid">
+    <div id="game" class="thirteen wide column">
+      <canvas id="gameCanvas" width="800" height="500"></canvas>
+    </div>
+    <div id="options" class="three wide column">
+      <button id="restartGame">Restart Game</button>
+      <ul id="playerList">
+
+      </ul>
+    </div>
+</div>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script src="/client/dist/main.js"></script>
+</body>
+</html>
