@@ -1,5 +1,5 @@
 {
-  "base": "\\client\\styles\\semantic",
+  "base": "\\client\\dist\\styles\\semantic",
   "paths": {
     "source": {
       "config": "src/theme.config",
