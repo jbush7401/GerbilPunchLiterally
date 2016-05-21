@@ -2,9 +2,10 @@
  * Created by jbush_000 on 5/18/2016.
  */
 "use strict";
+import ClientConfig from '../config/clientConfig';
 
 export default class canvasHelper {
-  constructor (canvas, socket){
+    constructor (canvas, socket){
       this.height = canvas.height;
       this.width = canvas.width;
       this.cvs = canvas;
@@ -15,7 +16,16 @@ export default class canvasHelper {
   }
     
     clear() {
-        this.context.fillRect(0, 0, this.width, this.height);
+        this.context.clearRect(0, 0, this.width, this.height);
+        this.context.fillStyle = "black";
+    }
+
+    drawGerbils(data) {
+        this.clear();
+        for (var i = 0; i < data.length; i++) {
+            this.context.fillStyle = data[i].color;
+            this.context.fillRect(data[i].x, data[i].y, 20, 20);
+        }
     }
 
     getCursorPosition(event) {
@@ -30,11 +40,9 @@ export default class canvasHelper {
     }
 
     _initializeClickListeners() {
-        const self = this;
-        this.cvs.addEventListener('click', function (event) {
-            var coords = self.getCursorPosition(event);
-            self.socket.emit('mouseClick', coords);
-            console.log("x: " + coords.x + " y: " + coords.y);
+        this.cvs.addEventListener('click', (event) => {
+            var coords = this.getCursorPosition(event);
+            this.socket.emit(ClientConfig.IO.OUTGOING.MOUSE_CLICK, coords);
         });
     }
 }

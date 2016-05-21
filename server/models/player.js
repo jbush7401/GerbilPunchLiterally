@@ -5,6 +5,15 @@
 class Player {
     constructor(id){
         this.id = id;
+        this.currentScore = 0;
+    }
+
+    resetPlayer(){
+        this.currentScore = 0;
+    }
+
+    addScore(){
+        this.currentScore++;
     }
 }
 

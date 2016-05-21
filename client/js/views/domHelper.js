@@ -13,4 +13,15 @@ export default class DomHelper {
     static getBody() {
         return document.body;
     }
+
+    static getTimer() {
+        return document.getElementById("timer");
+    }
+    static getRestartButton() {
+        return document.getElementById("restartGame");
+    }
+
+    static getPlayerList() {
+        return document.getElementById("playerList");
+    }
 }

@@ -1,3 +1,14 @@
 #entry {
     margin-top: 50px;
 }
+
+#timerText {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+.currentPlayer {
+    color: red;
+}
