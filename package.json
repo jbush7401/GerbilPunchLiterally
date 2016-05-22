@@ -54,7 +54,6 @@
     "node-uuid": "^1.4.7",
     "require-dot-file": "^0.4.0",
     "run-sequence": "^1.1.5",
-    "semantic-ui": "^2.1.8",
     "socket.io": "^1.4.6",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",

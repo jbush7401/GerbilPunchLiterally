@@ -28,7 +28,7 @@ class GameTickService{
 
     setGameTimeLeft(){
         this.gameEndTime = new Date();
-        this.gameEndTime.setSeconds(this.gameEndTime.getSeconds() + 121);
+        this.gameEndTime.setSeconds(this.gameEndTime.getSeconds() + 120);
     }
 
     getGameTimeLeft(){

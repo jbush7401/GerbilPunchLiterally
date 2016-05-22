@@ -40,6 +40,12 @@ class PlayerService {
             socket.emit(ServerConfig.IO.OUTGOING.PLAYER_LIST, PlayerList);
         });
     }
+
+    resetPoints(){
+        for(var value of this.playerContainer.getPlayers()){
+            value.currentScore = 0;
+        }
+    }
 }
 
 module.exports = PlayerService;

@@ -68,6 +68,7 @@ class GameController {
         this.socketService.getAllSockets().forEach(socket => {
             socket.emit(ServerConfig.IO.INCOMING.GERBIL_SPAWN, this.Gerbils);
         });
+        this.playerService.resetPoints();
         this.playerService.sendPlayers();
         this.gameTickService.changeSpawnSpeed(this.SpawnGerbil.bind(this), ServerConfig.SPAWN_SPEED);
         this.gameTickService.restartGame();

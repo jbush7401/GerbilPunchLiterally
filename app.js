@@ -8,9 +8,6 @@ var app = express();
 var serv = require('http').Server(app);
 var io = require('socket.io')(serv, {});
 
-
-
-
 app.use('/client',express.static(__dirname + '/client'));
 
 app.get('/',function(req, res) {
