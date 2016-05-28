@@ -1,7 +1,7 @@
 /**
  * Created by jbush_000 on 5/21/2016.
  */
-"use strict"
+"use strict";
 
 class SocketService {
     constructor() {

@@ -4,6 +4,7 @@
 import DomHelper from './js/views/domHelper';
 import CanvasView from './js/views/canvasHelper';
 import GameController from './js/controllers/gameController';
+import io from 'socket.io-client';
 
 "use strict";
 const gameController = new GameController();

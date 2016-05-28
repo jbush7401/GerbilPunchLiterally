@@ -5,7 +5,7 @@ const ServerConfig = {
     maxX: 780,
     maxY: 480,
     SPAWN_SPEED: 2000,
-    Gerbil_Colors: {red: 'red', blue: 'blue', green: 'green', yellow: 'orange'},
+    Gerbil_Colors: {red: 'red', blue: 'blue', green: 'green', yellow: 'yellow'},
     IO: {
         DEFAULT_CONNECTION: 'connection',
         DISCONNECT: 'disconnect',
@@ -18,7 +18,9 @@ const ServerConfig = {
             GERBIL_SPAWN: 'gerbil spawn',
             PLAYER_LIST: 'player list',
             PLAYER_NAME: 'player name',
-            GAME_TICK: 'game tick'
+            GAME_TICK: 'game tick',
+            GAME_STATE: 'game state',
+            PLAYER_POINT_VALUES: 'player point values'
         }
     }
 };

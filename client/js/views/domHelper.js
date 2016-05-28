@@ -9,6 +9,10 @@ export default class DomHelper {
     static getCanvas() {
         return document.getElementById("gameCanvas");
     }
+    
+    static getInfoCanvas() {
+        return document.getElementById("infoCanvas");
+    }
 
     static getBody() {
         return document.body;
