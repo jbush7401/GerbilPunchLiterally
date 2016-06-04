@@ -8,14 +8,14 @@ var app = express();
 var serv = require('http').Server(app);
 var io = require('socket.io')(serv, {});
 
-app.use('/client',express.static(__dirname + '/client'));
+app.use('/client', express.static(__dirname + '/client'));
 
-app.get('/',function(req, res) {
-    res.sendFile(__dirname + '/client/index.html');
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/client/index.html');
 });
 
 serv.listen(2000, () => {
-    console.log('Express server listening on port %d in %s mode', app.get('port'), app.get('env'));
+  console.log('Express server listening on port %d in %s mode', app.get('port'), app.get('env'));
 });
 
 var gameController = new GameController();
